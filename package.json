@@ -1,0 +1,38 @@
+{
+  "name": "check-pages-cli",
+  "description": "Checks various aspects of a web page for correctness.",
+  "version": "0.9.0",
+  "homepage": "https://github.com/DavidAnson/check-pages-cli",
+  "author": "David Anson (https://dlaa.me/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidAnson/check-pages-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavidAnson/check-pages-cli/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "check-pages": "index.js"
+  },
+  "scripts": {
+    "test": "node index.js",
+    "lint": "eslint index.js"
+  },
+  "dependencies": {
+    "check-pages": "^0.9.0",
+    "yargs": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.8.0"
+  },
+  "keywords": [
+    "validate",
+    "check",
+    "page",
+    "link",
+    "html",
+    "xhtml"
+  ]
+}
