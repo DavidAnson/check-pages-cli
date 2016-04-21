@@ -18,7 +18,7 @@ npm install --global check-pages-cli
 
 ## Options
 
-```shell
+```text
 Usage: check-pages-cli <page URLs> [options]
 
 Checks:
