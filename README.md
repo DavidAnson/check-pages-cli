@@ -58,6 +58,7 @@ Refer to the [check-pages documentation](https://github.com/DavidAnson/check-pag
 ## Release History
 
 - 0.9.0 - Initial release.
+- 0.10.0 - Add `preferSecure` and `terse`.
 
 [npm-image]: https://img.shields.io/npm/v/check-pages-cli.svg
 [npm-url]: https://www.npmjs.com/package/check-pages-cli
