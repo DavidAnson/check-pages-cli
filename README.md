@@ -19,7 +19,7 @@ npm install --global check-pages-cli
 ## Options
 
 ```text
-Usage: check-pages-cli <page URLs> [options]
+Usage: check-pages <page URLs> [options]
 
 Checks:
   --checkLinks        Validates each link on a page  [boolean]

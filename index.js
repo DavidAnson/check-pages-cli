@@ -8,8 +8,9 @@ var process = require("process");
 var yargs = require("yargs");
 var packageJson = require("./package.json");
 
+var name = packageJson.name.replace(/-cli$/, "");
 var options = yargs.
-  usage("Usage: $0 <page URLs> [options]").
+  usage("Usage: " + name + " <page URLs> [options]").
   option("checkLinks", {
     "describe": "Validates each link on a page",
     "type": "boolean"
