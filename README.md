@@ -33,10 +33,12 @@ checkLinks options:
   --noLocalLinks      Fails for local links  [boolean]
   --noRedirects       Fails for HTTP redirects  [boolean]
   --onlySameDomain    Ignores links to other domains  [boolean]
+  --preferSecure      Verifies HTTPS when available  [boolean]
   --queryHashes       Verifies query string file hashes  [boolean]
 
 Options:
   --summary          Summarizes issues after running  [boolean]
+  --terse            Results on one line, no progress  [boolean]
   --maxResponseTime  Response timeout (milliseconds)  [number]
   --userAgent        Custom User-Agent header  [string]
   --version          Show version number  [boolean]

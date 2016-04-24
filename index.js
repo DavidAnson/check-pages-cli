@@ -34,6 +34,10 @@ var options = yargs.
     "describe": "Ignores links to other domains",
     "type": "boolean"
   }).
+  option("preferSecure", {
+    "describe": "Verifies HTTPS when available",
+    "type": "boolean"
+  }).
   option("queryHashes", {
     "describe": "Verifies query string file hashes",
     "type": "boolean"
@@ -54,6 +58,10 @@ var options = yargs.
     "describe": "Summarizes issues after running",
     "type": "boolean"
   }).
+  option("terse", {
+    "describe": "Results on one line, no progress",
+    "type": "boolean"
+  }).
   option("maxResponseTime", {
     "describe": "Response timeout (milliseconds)",
     "type": "number"
@@ -67,7 +75,7 @@ var options = yargs.
     "Checks:").
   group(
     ["linksToIgnore", "noEmptyFragments", "noLocalLinks", "noRedirects",
-     "onlySameDomain", "queryHashes"],
+     "onlySameDomain", "preferSecure", "queryHashes"],
     "checkLinks options:").
   version().
   help().
@@ -77,16 +85,14 @@ var options = yargs.
   strict().
   argv;
 options.pageUrls = options._;
-var errorCount = 0;
 var host = {
   "log": function log (msg) {
     console.log(chalk.green(msg));
   },
   "error": function error (msg) {
     console.error(chalk.red(msg));
-    errorCount += 1;
   }
 };
-checkPages(host, options, function callback () {
-  process.exit(errorCount);
+checkPages(host, options, function callback (error, count) {
+  process.exit(count);
 });
